@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { InscricaoRoutingModule } from './inscricao-routing.module';
 import { CursoListaComponent } from './curso-lista/curso-lista.component';
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
-import { InscricaoComponent } from './inscricao/inscricao.component';
 import { InscricaoFormComponent } from './inscricao-form/inscricao-form.component';
 
 @NgModule({
@@ -12,6 +11,6 @@ import { InscricaoFormComponent } from './inscricao-form/inscricao-form.componen
     CommonModule,
     InscricaoRoutingModule
   ],
-  declarations: [CursoListaComponent, CursoDetalheComponent, InscricaoComponent, InscricaoFormComponent]
+  declarations: [CursoListaComponent, CursoDetalheComponent, InscricaoFormComponent]
 })
 export class InscricaoModule { }

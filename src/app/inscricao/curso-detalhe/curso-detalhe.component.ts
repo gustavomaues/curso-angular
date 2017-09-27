@@ -1,3 +1,4 @@
+import { Curso } from './../curso';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./curso-detalhe.component.css']
 })
 export class CursoDetalheComponent implements OnInit {
+
+  curso: Curso;
 
   constructor() { }
 
