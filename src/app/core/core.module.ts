@@ -9,6 +9,7 @@ import { TopoComponent } from './topo/topo.component';
     CommonModule,
     CoreRoutingModule
   ],
-  declarations: [TopoComponent]
+  declarations: [TopoComponent],
+  exports: [TopoComponent]
 })
 export class CoreModule { }
