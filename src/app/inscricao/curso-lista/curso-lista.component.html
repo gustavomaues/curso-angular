@@ -1,2 +1,2 @@
 <h2>Cursos Disponíveis</h2>
-<app-curso-detalhe *ngFor="let curso of cursos" [curso]="curso"></app-curso-detalhe>
+<app-curso-detalhe *ngFor="let curso of cursos" [curso]="curso" (cursoSelecionado)="incrementaClicks($event)"></app-curso-detalhe>

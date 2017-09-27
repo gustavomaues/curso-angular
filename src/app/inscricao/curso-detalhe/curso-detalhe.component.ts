@@ -1,5 +1,5 @@
 import { Curso } from './../curso';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-curso-detalhe',
@@ -10,9 +10,17 @@ export class CursoDetalheComponent implements OnInit {
 
   @Input() curso: Curso;
 
+  @Output() cursoSelecionado = new EventEmitter<Curso>();
+
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  inscrever(): void {
+    console.log(`Alguém querendo se inscrever no curso ${this.curso.nome}`);
+    this.cursoSelecionado.emit(this.curso);
   }
 
 }

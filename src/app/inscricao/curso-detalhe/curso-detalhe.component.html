@@ -1,5 +1,5 @@
 <div class="ui-g curso-detalhe">
   <div class="ui-g-1">{{ curso.id }}</div>
-  <div class="ui-g-9">{{ curso.nome }}</div>
-  <div class="ui-g-2">Inscrição</div>
+  <div class="ui-g-9">{{ curso.nome }} ({{ curso.clicks }})</div>
+  <div class="ui-g-2"><a (click)="inscrever()">inscrever-se</a></div>
 </div>

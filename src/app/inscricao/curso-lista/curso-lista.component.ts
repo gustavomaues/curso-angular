@@ -21,4 +21,8 @@ export class CursoListaComponent implements OnInit {
   ngOnInit() {
   }
 
+  incrementaClicks(curso: Curso) {
+    this.cursos.find(c => c.id === curso.id).incrementa();
+  }
+
 }
