@@ -1,3 +1,42 @@
-<p>
-  inscricao-form works!
-</p>
+{{ inscricao.nome }}
+<h1>Exemplo com Reactive Forms</h1>
+<form [formGroup]="inscricaoForm" novalidate>
+    <div>
+      <label class="center-block">Nome:
+        <input formControlName="nome">
+      </label>
+      <label class="center-block">E-mail:
+          <input formControlName="email">
+        </label>
+    </div>
+  </form>
+  <pre>{{inscricaoForm.value | json}}</pre>
+
+<h1>Exemplo Template Driven Forms</h1>
+<form #f="ngForm">
+  <label>Nome: </label>
+  <input type="text" name="nome" ngModel required>
+</form>
+<pre>{{f.value | json}}</pre>
+<pre>Form Valid? {{f.valid}}</pre>
+<pre>Nome Valid? {{f.form.controls.nome?.valid}}</pre>
+<pre>Nome Dirty? {{f.form.controls.nome?.dirty}}</pre>
+<pre>Nome Touched? {{f.form.controls.nome?.touched}}</pre>
+
+<h1>Exemplo Template Driven Forms com Two-Way data Binding</h1>
+<form #g="ngForm">
+  <label>Nome: </label>
+  <input type="text" name="nome" [(ngModel)]="inscricao.nome" required class="form-control">
+</form>
+<pre>{{g.value | json}}</pre>
+<pre>Form Valid? {{g.valid}}</pre>
+<pre>Nome Valid? {{g.form.controls.nome?.valid}}</pre>
+<pre>Nome Dirty? {{g.form.controls.nome?.dirty}}</pre>
+<pre>Nome Touched? {{g.form.controls.nome?.touched}}</pre>
+
+<h2>Inscrições Realizadas</h2>
+<div class="ui-g inscricao" *ngFor="let insc of inscricoes">
+  <div class="ui-g-4">{{ insc.nome }}</div>
+  <div class="ui-g-4">{{ insc.curso.nome }}</div>
+  <div class="ui-g-4">{{ insc.dataInscricao | date:'dd/MM/yyyy' }}</div>
+</div>
