@@ -7,9 +7,9 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: 'curso',
       children: [
-        { path: '', redirectTo: 'disponiveis', pathMatch: 'full'},
+        { path: '', redirectTo: 'lista', pathMatch: 'full'},
         { path: 'inscricao/:cursoId', component: InscricaoFormComponent},
-        { path: 'disponiveis', component: CursoListaComponent},
+        { path: 'lista', component: CursoListaComponent},
       ]
   },
 ];
