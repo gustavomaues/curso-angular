@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  logado: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  isUsuarioAutenticado(): boolean {
+    return this.logado;
   }
 
 }

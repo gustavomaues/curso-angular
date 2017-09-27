@@ -1,7 +1,12 @@
 <div class="ui-g home">
   <div class="ui-g-12">
-      <p>
+      <p [hidden]="!isUsuarioAutenticado()">
           Bem vindo ao nosso sistema.
       </p>
+      <p [hidden]="isUsuarioAutenticado()">
+          Visitante, faça login.
+      </p>
+
+      <button (click) = "logado = !logado">{{ logado ? "Logout" : "Login" }}</button>
   </div>
 </div>
