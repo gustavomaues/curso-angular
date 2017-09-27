@@ -7,6 +7,7 @@
           Visitante, faça login.
       </p>
 
-      <button (click) = "logado = !logado">{{ logado ? "Logout" : "Login" }}</button>
+      <button (click) = "logado = !logado">{{ logado ? "Logout" : "Login" }}</button> <br /><br />
+      <button (click) = "alteraAutenticacao()">{{ logado ? "Logout" : "Login" }}</button>
   </div>
 </div>

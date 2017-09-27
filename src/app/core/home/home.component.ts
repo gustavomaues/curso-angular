@@ -18,4 +18,7 @@ export class HomeComponent implements OnInit {
     return this.logado;
   }
 
+  alteraAutenticacao(): void {
+    this.logado = !this.logado;
+  }
 }
